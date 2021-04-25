@@ -22,7 +22,7 @@ What if the data are more complex so hacking binary in hex editor becomes a chor
 you are actually not the owner of the data, and you have other team members contributing to the 
 contents of the data - they may not be able to modify data, or they can accidentally break
 the binary data by hacking them in hex editor. In such cases the data compiler comes handy: the data
-can ne expressed in a text format (with C-like syntax) and then compiled into binaries during build time
+can be expressed in a text format (with C-like syntax) and then compiled into binaries during build time
 of your project.
 
 **Features**
@@ -60,8 +60,8 @@ See 'examples' directory for more examples.
 
 **Building the data compiler**
 
-You'll need a GNU make and a java compiler. Ensure your java compiler (javac) can be exeecuted.
-Change your PATH environment variable andpoint to the javac location if not.
+You'll need a GNU make and a java compiler. Ensure your java compiler (javac) can be executed
+from a command line. Change your PATH environment variable and point to the javac location if not.
 Like this: 
 <pre>
 export PATH=/opt/java-8-openjdk-amd64/bin:$PATH
@@ -98,8 +98,8 @@ If you don't pass any parameters, then the list of options will be printed.
   constant called MAGIC of type int (32 bits) with value 0x102030.
 * define your arrays: the same way as other variables. Array elements are spearated by space.
   For example 'short[] coords' defines a data type called 'coords' that will contain a variable-length
-  array of 16bit integers. To fill the array and to save data use 'coords = 100 200 300 400' which will
-  save the number ofthe eleements in the array as 16 bit integer, then the individual elements.
+  array of 16 bit integers. To fill the array and to save data use 'coords = 100 200 300 400' which
+  saves the number of the elements in the array as 16 bit integer, then saves the individual elements.
 * define your struct: 
 <pre>
 struct MyStruct {
@@ -118,4 +118,5 @@ struct MyStruct {
 * use #ifdef [SYMBOL] #else #endif for conditional data compilation
 * use -DSYMBOL or -DCONST_VAL=100 as a parameter to inject values or preprocessor
   symbols during compilation time.
+* check the exmaples in the 'examples' directory for more information
   
