@@ -3,15 +3,15 @@ Compiles generic data elements expressed in text scripts into a binary format.
 
 **Why binary data?**
 
-* simpler to parse: actually no need to parse -just read the data into structures
+* simpler to parse: actually no need to parse - just read the data into structures
 * when you don't need to parse the data (otherwise stored in text files like .json or 
   .xml) then you don't need the parsing libraries which take memory space. 
   Important for embedded projects.
 * when you don't need to parse you get higher speeds while reading the data
 * when you don't need to parse then your CPU can do other things (handling ISR etc.)
-  That's important for embedded projects.
+  Again - important for embedded projects.
 * binary data require smaller storage space - can fit to MCU or inside a small flash chip etc.
-* parsing and data transfer of binary data consumes less energy - important for battery
+* reading and data transfers of binary data consumes less energy - important for battery
   operated devices. 
 
 **Why data compiler?**
